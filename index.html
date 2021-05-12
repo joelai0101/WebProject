@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首頁</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script.js" defer></script>
+</head>
+<body>
+  <div id="header-wrap">
+    <header>
+    <div id="title-container">
+      <div class="heading"><h1>網頁設計作業</h1></div>
+      <hr> 
+      <div class="heading"><h2>自我介紹</h2></div>
+      <div>
+        <ul class="content" id="top-container">
+          <div class="info" id="info-container">
+            <li>姓名：賴昱僑</li>
+            <li>學號：408411303</li>
+            <li>科系：資工二A</li>
+          </div>
+          <li>
+            <a href="https://www.tku.edu.tw/campstu.asp">
+              <img id="tku-image" id="img-container" src="https://www.tku.edu.tw/images/logo_x2.jpg"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="heading"><h2>導覽</h2></div>
+      <div>
+        <ul class="content button website" id="button-container">
+          <form class="input-button">
+            <li><input type="button" onclick="window.location.href='index.html';" value="回首頁"></li>
+            <li><input type="button" onclick="window.location.href='table.html';" value="教授課表"></li>
+            <li><input type="button" onclick="window.location.href='research.html';" value="教授研究領域"></li>
+            <li><input type="button" onclick="window.location.href='member.html';" value="研究成員"></li>
+          </form>
+        </ul>
+      </div>
+    </div>
+    </header>
+  </div>
+
+  <div id="main-wrap">
+    <main>
+      <div class="heading"><h3>Simple javaScript function</h3></div>
+      <div>
+        <div class="heading"><h5>Simple Calculator</h5></div>
+        <div class="content">
+          <form class="calculator" onsubmit="return false">
+            <input type="number" id="text1" /><br />
+            <input type="number" id="text2" /><br />
+            <span id="text3"></span>
+            <div class="button">
+              <button onclick="calculate('+')">+</button>
+              <button onclick="calculate('-')">-</button><br />
+              <button onclick="calculate('/')">/</button>
+              <button onclick="calculate('*')">X</button>
+            </div>
+          </form>
+        </div>
+        <div class="heading"><h5>Now time</h5></div>
+        <div class="content">
+          <div class="clock">
+            <div class="clock-face">
+              <div class="hand hour-hand"></div>
+              <div class="hand min-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+          </div>
+          <p id="todaysDate"></p>
+        </div>
+        <div class="heading"><h5>Window confirm() Method</h5></div>
+        <div class="content">
+          <button onclick="confirmFunction()">confirm now</button>
+          <p id="confirmMsg"></p>
+        </div>
+        <div class="heading"><h5>get hostname</h5></div>
+        <div class="content">
+          <button onclick="getLocationHostNameFunction()">get hostname now</button>
+        </div>
+        <div class="heading"><h5>input name by Prompt Box</h5></div>
+        <div class="content">
+          <button onclick="PromptBoxFunction()">type in now</button>
+          <p id="name"></p>
+        </div>
+        <div class="heading"><h5>window.open</h5></div>
+        <div class="content">
+          <button onclick="focusFunction()">create index page now</button>
+        </div>
+        <div class="heading"><h5>Keydown</h5></div>
+        <div class="content">
+          <div class="wrap">
+            <p class="text-display">Press any key to get the JavaScript event keycode</p>
+            <p class="keycode-display"></p>
+            <div class="cards hide">
+              <div class="card item-key">
+                <div class="card-header">event.key</div>
+                <div class="card-main">
+                  <div class="main-description">F12</div>
+                </div>
+              </div>
+              <div class="card item-location">
+                <div class="card-header">event.location</div>
+                <div class="card-main">
+                  <div class="main-description">0 <span class="text-muted">(General keys)</span></div>
+                </div>
+              </div>
+              <div class="card item-code">
+                <div class="card-header">event.code</div>
+                <div class="card-main">
+                  <div class="main-description">F12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="heading"><h5>multiple checkboxes</h5></div>
+        <div class="content">
+          <div class="inbox">
+            <div class="item">
+              <input type="checkbox">
+              <p>This is an inbox layout.</p>
+            </div>
+            <div class="item">
+              <input type="checkbox">
+              <p>Check one item</p>
+            </div>
+            <div class="item">
+              <input type="checkbox">
+              <p>Hold down your Shift key</p>
+            </div>
+            <div class="item">
+              <input type="checkbox">
+              <p>Check a lower item</p>
+            </div>
+            <div class="item">
+              <input type="checkbox">
+              <p>Others between both should be set to checked</p>
+            </div>
+            <div class="item">
+              <input type="checkbox">
+              <p>Good Luck!</p>
+            </div>
+          </div>
+          <div class="wrapper">
+            <form class="add-items">
+              <input type="text" name="item" placeholder="Item Name" required>
+              <input type="submit" value="+ Add Item">
+            </form>
+            <div class="checkMethod">
+              <div class="checkItem">
+                <input class="checkAll" type="checkbox">
+                <p>Check All</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="heading"><h5>Shadowing mouse moving</h5></div>
+        <div class="content">
+          <div class="shadow-move">
+            <h1 contenteditable id="word">Hello world!</h1>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="heading"><h3>My Favorite</h3></div>
+      <div>
+        <ul class="content" id="favorite-container">
+          <li>
+            <div class="heading"><h5>Fall Out Boy - Thnks Fr Th Mmrs</h5></div>
+            <audio controls>
+              <source
+                src="Fall Out Boy - Thnks Fr Th Mmrs (Audio) (HD).mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </li>
+          <br>
+          <li>
+            <div class="heading"><h5>🐢</h5></div>
+            <iframe
+              width="744"
+              height="419"
+              src="https://www.youtube.com/embed/Wl9oUBgFk6Y"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="heading"><h5>Vivy: Fluorite Eye's Song Opening 1 - "Sing My Pleasure" by Vivy (Kairi Yagi)</h5></div>
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/ptTxK8CZ96Q" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+            <div class="heading"><h5>Set It Off - Kill The Lights (Lyric Video)</h5></div>
+            <iframe 
+              width="956" 
+              height="538" 
+              src="https://www.youtube.com/embed/oR_iQomHOZQ" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+            ></iframe>
+            <p>好聽ㄉ==</p>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div class="heading"><h4>Common website</h4></div>
+      <div>
+        <ul class="content button website" id="button-container">
+          <div class="website-list">
+            <li><a href="https://www.google.com.tw/">Google</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://tw.yahoo.com/">Yahoo</a></li>
+            <li><a href="https://www.youtube.com/">YouTube</a></li>
+          </div>
+        </ul>
+      </div>
+      <hr />
+      <div class="heading"><h4>CSS Animation</h4></div>
+      <div class="heading"><h5>animation-timing-function</h5></div>
+      <div class="content">
+        <div class="animate" id="first">linear</div>
+        <div class="animate" id="second">ease</div>
+        <div class="animate" id="third">ease-in</div>
+        <div class="animate" id="fourth">ease-out</div>
+        <div class="animate" id="fifth">ease-in-out</div>
+      </div>
+      <div>
+        <marquee behavior="alternate-reverse" direction="alternate-reverse">
+          <span class="circular">作業講張志勇</span>
+          <br />
+          <a href="https://wireless.csie.tku.edu.tw/~cychang/">
+            <div class="image">
+              <img
+              id="marquee-image"
+              src="cyc(4).jpg"
+              alt="圖片顯示失敗" />
+            </div>
+          </a>
+        </marquee>
+      </div>
+      <hr>
+      <div>
+        <div>
+          <div class="info" id="info-container">
+            <div><h3 style="color: #0000FF;">Prof. Chih-Yung Chang (張志勇 特聘教授)</h3></div>
+            <div class="image">
+              <img
+              id="info-image"
+              src="waterimg.jpg"
+              alt="圖片顯示失敗"
+              />
+            </div>
+            <p>
+              <a href="http://www.engineering.tku.edu.tw/main.php" target="_blank">Dept. Computer Science and Information Engineering</a>
+              <br />
+              <a href="http://www.tku.edu.tw" target="_blank">Tamkang University</a>
+              <br />
+              <span>Office: E758 Tel: 02-2621-5656 ext. 2749 Fax:02-2620-9749</span><br>
+              <a href="https://wireless.csie.tku.edu.tw/~cychang/"><span>Email: cychang@mail.tku.edu.tw</span></a>
+            </p>
+            <p>
+            <span>現任就職：</span><br />
+            <span>淡江大學資工系專任特聘教授</span><br />
+            <span>淡江大學工學院物聯網與大數據中心主任</span><br />
+            <span>北京交通大學兼任客座教授</span><br />
+            <span>安徽滁州學院兼任特聘教授</span><br />
+            <a href="http://wp.nutn.edu.tw/sigmob/" target="_blank"><span>Chair of Taiwan ACM SIGMOBILE Chapter</span></a>
+            
+          </p>
+          </div>
+        </div>
+      <hr>
+      <div>
+        <table
+          class="Table"
+          border="5px"
+          style="border: solid black; width: 1280px"
+        >
+        <thead>
+          <tr>
+            <th>節次</th>
+            <th>星期一</th>
+            <th>星期二</th>
+            <th>星期三</th>
+            <th>星期四</th>
+            <th>星期五</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>1</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>2</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>Meeting E819</p></td>
+          </tr>
+          <tr>
+            <td><p>3</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>Meeting E819</p></td>
+          </tr>
+          <tr>
+            <td><p>4</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>Meeting E819</p></td>
+          </tr>
+          <tr>
+            <td><p>5</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>機器學習與深度學習 (資工碩) E231</p></td>
+          </tr>
+          <tr>
+            <td><p>6</p></td>
+            <td><p></p></td>
+            <td><p>物聯網概論 G315</p></td>
+            <td><p>物聯網概論 G315</p></td>
+            <td><p></p></td>
+            <td><p>機器學習與深度學習 (資工碩) E231</p></td>
+          </tr>
+          <tr>
+            <td><p>7</p></td>
+            <td><p></p></td>
+            <td><p>物聯網概論 G315</p></td>
+            <td><p>物聯網核心技術 (資1A) E510</p></td>
+            <td><p></p></td>
+            <td><p>機器學習與深度學習 (資工碩) E231</p></td>
+          </tr>
+          <tr>
+            <td><p>8</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>物聯網核心技術 (資1A) E510</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>9</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p>物聯網核心技術 (資1A) E510</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>10</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>11</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>12</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+          <tr>
+            <td><p>13</p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+            <td><p></p></td>
+          </tr>
+        </tbody>
+        <caption class="table name">
+          <span style="color: #0056b3;">張志勇</span> 老師 上課時間表
+        </caption>
+        </table>
+      </div>
+      <div>
+        <ul class="content button website" id="button-container">
+          <li>
+            <button onclick="window.location.href='https://www.tku.edu.tw/';">
+              <a href="https://www.tku.edu.tw/" target="_blank">淡江大學網站</a>
+            </button>
+          </li>            
+          <li>
+            <button onclick="window.location.href='http://www.engineering.tku.edu.tw/';">
+              <a href="http://www.engineering.tku.edu.tw/" target="_blank">工學院網站</a>
+            </button>
+          </li>
+          <li>
+            <button onclick="window.location.href='http://www.ai.tku.edu.tw/';">
+              <a href="http://www.ai.tku.edu.tw/" target="_blank">人工智慧學系</a>
+            </button>
+          </li>
+          <li>
+            <button onclick="window.location.href='http://www.csie.tku.edu.tw/';">
+              <a href="http://www.csie.tku.edu.tw/" target="_blank">資訊工程學系</a>
+            </button>
+          </li>
+          <li>
+            <button onclick="window.location.href='#';"><a href="#">回到頂端</a></button>
+          </li>
+        </div>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <div id="footer-wrap">
+    <footer>
+      <div class="image" align="right" style="position: fixed; z-index:9999; right:0px; bottom:0px;">
+        <a href="#">
+          <img
+            id="footer-image"
+            src="https://www.tku.edu.tw/about/leaders/vpacd/images/logo-index.png"
+            alt="tku_icon無法顯示"
+            height="100"
+            weight="100"
+          />
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
